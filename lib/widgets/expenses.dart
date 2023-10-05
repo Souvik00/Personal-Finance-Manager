@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:personal_finance_manger/widgets/expenses_list/expenses_list.dart';
 import 'package:personal_finance_manger/models/expense.dart';
+import 'package:personal_finance_manger/widgets/new_expense.dart';
 
 class Expenses extends StatefulWidget{
   const Expenses({super.key});
@@ -29,7 +30,7 @@ class _ExpensesState extends State<Expenses>{
   ];
   void _openAdExpenseOverlay(){
         showModalBottomSheet(context: context, builder: (ctx){
-          return Text('Mddal bottom sheet');
+          return const NewExpense();
         });
   }
   @override
