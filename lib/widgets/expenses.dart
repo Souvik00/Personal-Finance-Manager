@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:personal_finance_manger/widgets/expenses_list/expenses_list.dart';
 import 'package:personal_finance_manger/models/expense.dart';
@@ -27,9 +27,22 @@ class _ExpensesState extends State<Expenses>{
   ),
 
   ];
+  void _openAdExpenseOverlay(){
+        showModalBottomSheet(context: context, builder: (ctx){
+          return Text('Mddal bottom sheet');
+        });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Personal Expenses Tracker'),
+        actions: [
+          IconButton(onPressed: _openAdExpenseOverlay,
+              icon: const Icon(Icons.add),
+          ),
+        ],
+      ),
       body:Column(
       children: [
         const Text('chart'),

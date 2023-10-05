@@ -3,8 +3,11 @@ import 'package:personal_finance_manger/widgets/expenses.dart';
 
 void main() {
   runApp(
-  const MaterialApp(
-    home: Expenses(),
+   MaterialApp(
+
+    theme: ThemeData(useMaterial3: true),
+    home: const Expenses(),
+     debugShowCheckedModeBanner: false,
   )
   );
 }
