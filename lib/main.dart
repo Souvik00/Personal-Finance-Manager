@@ -5,7 +5,9 @@ void main() {
   runApp(
    MaterialApp(
 
-    theme: ThemeData(useMaterial3: true),
+    theme: ThemeData().copyWith(
+        useMaterial3:true,
+        scaffoldBackgroundColor: Color.fromARGB(255, 71, 28, 114)),
     home: const Expenses(),
      debugShowCheckedModeBanner: false,
   )
