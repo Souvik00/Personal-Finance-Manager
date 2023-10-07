@@ -14,18 +14,6 @@ class Expenses extends StatefulWidget{
 
 class _ExpensesState extends State<Expenses>{
   final List<Expense>_registeredExpenses = [
-    Expense(
-  tittle: 'Flutter',
-  amount: 10.2,
-  date: DateTime.now(),
-  category: Catagory.work
-  ),
-  Expense(
-  tittle: 'Cinema',
-  amount: 1.2,
-  date: DateTime.now(),
-  category: Catagory.leisure
-  ),
 
   ];
   void _openAdExpenseOverlay(){
@@ -66,7 +54,7 @@ class _ExpensesState extends State<Expenses>{
   @override
   Widget build(BuildContext context) {
     Widget mainContent = const Center(
-      child: Text('NO Expenses found,Start adding some'),
+      child: Text('No Expenses found,Start adding some'),
     );
     if(_registeredExpenses.isNotEmpty){
       mainContent=ExpensesList(
@@ -85,7 +73,7 @@ class _ExpensesState extends State<Expenses>{
       ),
       body:Column(
       children: [
-        const Text('chart'),
+        const Text('The Chart'),
        Expanded(
          child:  mainContent,
        )

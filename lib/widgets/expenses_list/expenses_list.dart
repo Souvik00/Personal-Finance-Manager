@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:personal_finance_manger/models/expense.dart';
 import 'package:personal_finance_manger/widgets/expenses_list/expense_item.dart';
 class ExpensesList extends StatelessWidget{
@@ -15,6 +15,10 @@ class ExpensesList extends StatelessWidget{
         itemCount: expenses.length,
         itemBuilder: (ctx,index) => Dismissible(
             key: ValueKey(expenses[index]),
+            background: Container(
+              color: Theme.of(context).colorScheme.error.withOpacity(0.75),
+              margin: const EdgeInsets.symmetric(horizontal: 16),
+            ),
             onDismissed: (direction){
               onRemoveExpense(expenses[index]);
             },
